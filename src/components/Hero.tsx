@@ -46,13 +46,18 @@ const Hero = () => {
   };
 
   return (
-    <section
-      ref={heroRef}
-      className="relative h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/src/assets/hero-odisha.jpg')",
-      }}
-    >
+<section
+  className="relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
+  style={{
+    backgroundImage: "url('/hero-odisha.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+
+
+    
       <div ref={textRef}>
         <h1 className="text-6xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
           Discover Ancient Odisha
