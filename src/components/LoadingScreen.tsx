@@ -123,10 +123,15 @@ useEffect(() => {
         .to({}, { duration: 0.8 })
         // fade out
         .to(containerRef.current, {
-          opacity: 0,
-          duration: 0.6,
-          ease: "power2.inOut",
-        });
+  opacity: 0,
+  duration: 0.6,
+  ease: "power2.inOut",
+  onComplete: () => {
+    containerRef.current!.style.display = "none";   // removes overlay
+    onComplete();                                   // allows homepage to show
+  }
+});
+
     }, containerRef);
 
     return () => ctx.revert();
@@ -135,7 +140,8 @@ useEffect(() => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[100] bg-background flex flex-col items-center justify-center pointer-events-none"
+
     >
       <img
         ref={logoRef}
