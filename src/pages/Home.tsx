@@ -60,6 +60,10 @@ const Home = () => {
   // GSAP ANIMATIONS (unchanged)
   useEffect(() => {
     sectionsRef.current.forEach((section, index) => {
+      
+      // Skip the Hero section (avoid hiding background image)
+if (section?.id === "hero-section") return;
+
       if (section) {
         gsap.from(section, {
           scrollTrigger: {
@@ -206,7 +210,8 @@ const Home = () => {
     <>
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
+
         <Navigation />
         <Hero />
 

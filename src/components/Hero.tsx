@@ -47,16 +47,18 @@ const Hero = () => {
 
   return (
     <section
-      ref={heroRef}   // ⭐ THIS WAS MISSING (IMPORTANT)
-      className="relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
-      style={{
-        backgroundImage: "url('/odisha-hero-new.jpg')",
-   // ⭐ Correct path for Vercel
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+  id="hero-section"
+  ref={heroRef}
+  className="relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
+  style={{
+
+    backgroundImage: "url('https://i.imgur.com/5YtV2Jh.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+
       <div ref={textRef}>
         <h1 className="text-6xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
           Discover Ancient Odisha
@@ -93,6 +95,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
