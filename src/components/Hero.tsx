@@ -50,7 +50,8 @@ const Hero = () => {
       ref={heroRef}   // ⭐ THIS WAS MISSING (IMPORTANT)
       className="relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
       style={{
-        backgroundImage: "url('/hero-odisha.jpg')",   // ⭐ Correct path for Vercel
+        backgroundImage: "url('/odisha-hero-new.jpg')",
+   // ⭐ Correct path for Vercel
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
