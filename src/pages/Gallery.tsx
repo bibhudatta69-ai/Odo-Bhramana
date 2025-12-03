@@ -3,13 +3,14 @@ import { gsap } from "gsap";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImg from "@/assets/hero-odisha.jpg";
 import konarkImg from "@/assets/places/konark-sun-temple.jpg";
 import jagannathImg from "@/assets/places/jagannath-temple.jpg";
 import chilikaImg from "@/assets/places/chilika-lake.jpg";
 import cultureImg from "@/assets/culture-pattachitra.jpg";
 import festivalImg from "@/assets/festival-ratha-yatra.jpg";
 import foodImg from "@/assets/food-thali.jpg";
+
+const heroImg = "/hero-odisha.jpg";
 
 const Gallery = () => {
   useEffect(() => {
