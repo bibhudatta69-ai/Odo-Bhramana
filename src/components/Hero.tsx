@@ -8,7 +8,6 @@ const Hero = () => {
   const textRef = useRef(null);
 
   const playIntro = () => {
-    // MUSIC
     const audio = new Audio(introMusic);
     audio.volume = 0;
 
@@ -22,7 +21,6 @@ const Hero = () => {
       }, 120);
     });
 
-    // ANIMATIONS
     gsap.fromTo(
       heroRef.current,
       { filter: "brightness(90%) blur(2px)" },
@@ -47,18 +45,16 @@ const Hero = () => {
 
   return (
     <section
-  id="hero-section"
-  ref={heroRef}
-  className="relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
-  style={{
-
-    backgroundImage: "url('https://i.imgur.com/5YtV2Jh.jpeg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-
+      id="hero-section"
+      ref={heroRef}
+      className="w-full relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
+      style={{
+        backgroundImage: "url('https://i.imgur.com/5YtV2Jh.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div ref={textRef}>
         <h1 className="text-6xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
           Discover Ancient Odisha
@@ -69,10 +65,7 @@ const Hero = () => {
           and timeless traditions of India's best-kept secret.
         </p>
 
-        {/* BUTTONS */}
         <div className="flex gap-4 justify-center">
-
-          {/* ⭐ NEW BUTTON */}
           <button
             onClick={playIntro}
             className="px-6 py-3 rounded-lg bg-white/20 backdrop-blur-lg border border-white/30 text-white font-semibold hover:bg-white/30 transition-all shadow-lg"
@@ -80,22 +73,18 @@ const Hero = () => {
             Mo Odisha
           </button>
 
-          {/* Existing Button */}
           <button className="px-6 py-3 rounded-lg bg-white text-black font-semibold shadow-lg hover:bg-gray-200 transition-all">
             <Link to="/places">View Destinations</Link>
           </button>
-
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-5 animate-bounce opacity-80">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-2 h-2 bg-white rounded-full mt-2 animate-ping"></div>
         </div>
       </div>
     </section>
-    
   );
 };
 
