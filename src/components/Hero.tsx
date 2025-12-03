@@ -49,7 +49,7 @@ const Hero = () => {
       ref={heroRef}
       className="w-full relative flex items-center justify-center text-center py-44 sm:py-56 md:py-64"
       style={{
-        backgroundImage: "url('https://i.imgur.com/5YtV2Jh.jpeg')",
+        backgroundImage: "url('/hero-odisha.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
